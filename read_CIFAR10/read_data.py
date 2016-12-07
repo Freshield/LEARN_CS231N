@@ -32,3 +32,31 @@ print a.shape, b.shape
 print b - a[0]
 print b - a[0,:]
 print np.sum(b - a[0], axis=1)
+
+x = np.arange(60,step=3)
+print x
+y = np.array([1,3,5,7,9])
+print x[y[:]]
+
+t = np.array([1,23,1,4,5,1])
+print np.bincount(t)
+print 1 in t
+
+dic = {}
+for item in t:
+    if dic.get(item,-1) == -1:
+        dic[item] = 1
+    else:
+        dic[item] += 1
+
+print dic
+
+big = -1
+num = -1
+for item in dic:
+    now = dic[item]
+    if now > big:
+        num = item
+        big = now
+
+print num
