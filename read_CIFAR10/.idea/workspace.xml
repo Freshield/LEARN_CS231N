@@ -28,8 +28,8 @@
       <file leaf-file-name="k_nearest_neighbor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../assignment1/cs231n/classifiers/k_nearest_neighbor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-13">
-              <caret line="132" column="16" lean-forward="true" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+            <state relative-caret-position="311">
+              <caret line="129" column="4" lean-forward="false" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -317,8 +317,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../assignment1/cs231n/classifiers/k_nearest_neighbor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="132" column="16" lean-forward="true" selection-start-line="132" selection-start-column="16" selection-end-line="132" selection-end-column="16" />
+        <state relative-caret-position="311">
+          <caret line="129" column="4" lean-forward="false" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
           <folding />
         </state>
       </provider>

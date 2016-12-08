@@ -127,6 +127,7 @@ class KNearestNeighbor(object):
     left = np.square(X)
     right = np.square(self.X_train)
     dists = np.sqrt(np.add(np.add(left, middle), right))
+    
     #########################################################################
     #                         END OF YOUR CODE                              #
     #########################################################################
