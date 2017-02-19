@@ -60,3 +60,16 @@ for item in dic:
         big = now
 
 print num
+
+x = np.array([1,2,3]).reshape(3,1)
+
+print x
+
+y = np.array([4,5,6])
+
+print y
+
+print x + y
+
+x = np.array([[1,2,3],[4,5,6]])
+print np.sum(np.square(x),axis=1,keepdims=True)
