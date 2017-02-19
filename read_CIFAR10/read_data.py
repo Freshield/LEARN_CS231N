@@ -73,3 +73,11 @@ print x + y
 
 x = np.array([[1,2,3],[4,5,6]])
 print np.sum(np.square(x),axis=1,keepdims=True)
+
+print [y[w] for w in range(3) if w != 1 ]
+
+print x
+
+w = np.concatenate(x)
+
+print w
