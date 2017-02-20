@@ -15,3 +15,8 @@ print np.argmax(x)
 print np.argmax(x, axis=0)
 print np.argmax(x, axis=1)
 
+b = np.array([1,2,3,4,5]).reshape(-1,1)
+c = np.array([1,1,3,3,5]).reshape(-1,1)
+print (b == c)
+print np.mean(b == c)
+
