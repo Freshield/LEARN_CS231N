@@ -81,3 +81,11 @@ print x
 w = np.concatenate(x)
 
 print w
+
+x = np.array([[1,2,3],[4,5,6]])
+y = np.array([1,1])
+w = x[np.arange(2),y]
+w = x[[0,1],[0,0]]
+x[x > 2] = 0
+print w
+print x
