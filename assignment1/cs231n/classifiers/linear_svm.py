@@ -23,11 +23,11 @@ def svm_loss_naive(W, X, y, reg):
 
   # compute the loss and the gradient
   num_classes = W.shape[1]#10
-  num_train = X.shape[0]#49000
+  num_train = X.shape[0]#500
   loss = 0.0
   for i in xrange(num_train):
-    scores = X[i].dot(W)#3073*10
-    correct_class_score = scores[y[i]]
+    scores = X[i].dot(W)#1*10
+    correct_class_score = scores[y[i]]#the ith in y identity the correct index
     for j in xrange(num_classes):
       if j == y[i]:
         continue
@@ -75,7 +75,7 @@ def svm_loss_vectorized(W, X, y, reg):
   num_train = X.shape[0]
   num_class = W.shape[1]
 
-  score = np.dot(X, W)
+  score = np.dot(X, W)#500,10
   score_correct = score[np.arange(num_train),y]
   score_correct = np.reshape(score_correct, (num_train,1))
 
@@ -100,7 +100,9 @@ def svm_loss_vectorized(W, X, y, reg):
   # to reuse some of the intermediate values that you used to compute the     #
   # loss.                                                                     #
   #############################################################################
-  pass
+  margin[margin != 0] = 1.0
+  margin[np.arange(num_train),y] = -np.sum(margin,axis=1)
+  dW += np.dot(X.T, margin) / num_train + 2 * 0.5 * reg * W
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
