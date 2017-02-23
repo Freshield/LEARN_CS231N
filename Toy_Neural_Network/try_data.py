@@ -21,3 +21,6 @@ print a
 print b
 print c
 print d
+
+print np.random.choice(5, 7)
+print np.random.choice(5, 5, replace=False)
