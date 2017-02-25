@@ -25,6 +25,19 @@ print d
 print np.random.choice(5, 7)
 print np.random.choice(5, 5, replace=False)
 
+x = [2,3,1,5,7,1,4]
+print np.argmin(x)
+print x.pop(np.argmin(x))
+print x
+
+print range(10)
+print range(1,10,1)
+
+x = np.reshape(x, (1,-1))
+y = 4
+mask = x > 4
+print mask
+print x[x > y]
 """
 KeyPress event, serial 37, synthetic NO, window 0x6000001,
     root 0xf6, subw 0x0, time 9198554, (501,91), root:(1670,163),
