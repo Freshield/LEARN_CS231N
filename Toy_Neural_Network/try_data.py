@@ -24,3 +24,19 @@ print d
 
 print np.random.choice(5, 7)
 print np.random.choice(5, 5, replace=False)
+
+"""
+KeyPress event, serial 37, synthetic NO, window 0x6000001,
+    root 0xf6, subw 0x0, time 9198554, (501,91), root:(1670,163),
+    state 0x0, keycode 92 (keysym 0xfe03, ISO_Level3_Shift), same_screen YES,
+    XLookupString gives 0 bytes:
+    XmbLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+KeyRelease event, serial 37, synthetic NO, window 0x6000001,
+    root 0xf6, subw 0x0, time 9198727, (501,91), root:(1670,163),
+    state 0x80, keycode 92 (keysym 0xfe03, ISO_Level3_Shift), same_screen YES,
+    XLookupString gives 0 bytes:
+    XFilterEvent returns: False
+
+"""
