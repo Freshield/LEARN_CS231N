@@ -65,11 +65,11 @@ best_net = None  # store the best model into this
 # write code to sweep through possible combinations of hyperparameters          #
 # automatically like we did on the previous exercises.                          #
 #################################################################################
-hidden_size = [x * 50 for x in range(1, 3, 1)]
-learning_rate = [5e-5, 1e-4, 5e-4]#, 1e-3, 5e-3, 2e-3, 1e-2, 5e-2, 1e-1, 5e-1, 1]
-training_epoch = [x * 200 for x in range(1, 3, 1)]
-regularization_strengths = [0.001, 0.002, 0.05]#, 0.07, 0.1, 0.2, 0.5, 1, 5, 10, 20]
-batch_size_choice = [20, 50, 100]#, 150, 200, 350, 400, 500, 600, 700, 1000]
+hidden_size = [x * 50 for x in range(1, 10, 1)]
+learning_rate = [5e-5, 1e-4, 5e-4, 1e-3, 5e-3, 2e-3, 1e-2, 5e-2, 1e-1, 5e-1, 1]#]
+training_epoch = [x * 200 + 800 for x in range(1, 10, 1)]
+regularization_strengths = [0.001, 0.002, 0.05, 0.07, 0.1, 0.2, 0.5, 1, 5, 10, 20]#]
+batch_size_choice = [20, 50, 100, 150, 200, 350, 400, 500, 600, 700, 1000]#]
 
 input_size = 32 * 32 * 3
 num_classes = 10
