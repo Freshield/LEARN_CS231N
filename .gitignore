@@ -137,3 +137,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#datasets
+assignment2/datasets/*
