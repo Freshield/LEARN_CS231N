@@ -18,3 +18,5 @@ d[0] = 10
 print c
 print d
 print e
+
+print np.sum(b > 0)
