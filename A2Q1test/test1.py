@@ -20,3 +20,10 @@ print d
 print e
 
 print np.sum(b > 0)
+
+f = [{'model':'train'} for i in xrange(5)]
+
+print f
+
+f[0]['model'] = 'test'
+print f
