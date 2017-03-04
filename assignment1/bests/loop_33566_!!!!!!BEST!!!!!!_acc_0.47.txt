@@ -1,0 +1,6 @@
+best accuray is:0.466best rest times is:33566
+best hidden size is: 300
+best learning rate is: 0.0005
+best training epoch is:1800
+best regualrization streagths is: 0.1
+best batch size is: 20
