@@ -33,3 +33,6 @@ for i in xrange(1,5):
 
 for i in xrange(5):
     print i
+
+for i in xrange(10, 0, -1):
+    print i
