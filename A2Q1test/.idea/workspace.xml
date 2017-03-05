@@ -74,8 +74,8 @@
       <file leaf-file-name="optim.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/optim.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="108" column="2" lean-forward="false" selection-start-line="108" selection-start-column="2" selection-end-line="108" selection-end-column="2" />
+            <state relative-caret-position="324">
+              <caret line="102" column="61" lean-forward="true" selection-start-line="102" selection-start-column="61" selection-end-line="102" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -692,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/optim.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="108" column="2" lean-forward="false" selection-start-line="108" selection-start-column="2" selection-end-line="108" selection-end-column="2" />
+        <state relative-caret-position="324">
+          <caret line="102" column="61" lean-forward="true" selection-start-line="102" selection-start-column="61" selection-end-line="102" selection-end-column="61" />
           <folding />
         </state>
       </provider>
