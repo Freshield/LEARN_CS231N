@@ -27,3 +27,9 @@ print f
 
 f[0]['model'] = 'test'
 print f
+
+for i in xrange(1,5):
+    print i
+
+for i in xrange(5):
+    print i
