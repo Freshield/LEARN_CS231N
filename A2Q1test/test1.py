@@ -36,3 +36,15 @@ for i in xrange(5):
 
 for i in xrange(10, 0, -1):
     print i
+
+g = {'name':'yy', 'sex':'male'}
+g.setdefault('name','ww')
+g.setdefault('age','26')
+
+print g
+
+h = {'name':'yy', 'sex':'male'}
+
+print h.get('name','18')
+print h.get('dream','win')
+print h
