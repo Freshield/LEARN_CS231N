@@ -176,11 +176,13 @@ def batchnorm_forward(x, gamma, beta, bn_param):
     sample_mean = np.mean(x, axis=0)
     sample_var = np.var(x, axis=0)
     numer = x + (sample_mean * (-1))
-    denorm = np.sqrt(sample_var + eps)
-    norm = numer * (1 / denorm)
+    var_sum = sample_var + eps
+    var_sqrt = np.sqrt(var_sum)
+    denorm = 1 / var_sqrt
+    norm = numer * denorm
     out = norm * gamma + beta
 
-    cache = (sample_mean, sample_var, numer, denorm, norm, out)
+    cache = (sample_mean, sample_var, numer, denorm, norm, out, beta, gamma, eps, var_sum, var_sqrt, x)
 
     running_mean = momentum * running_mean + (1 - momentum) * sample_mean
     running_var = momentum * running_var + (1 - momentum) * sample_var
@@ -232,7 +234,32 @@ def batchnorm_backward(dout, cache):
   # TODO: Implement the backward pass for batch normalization. Store the      #
   # results in the dx, dgamma, and dbeta variables.                           #
   #############################################################################
-  pass
+  (sample_mean, sample_var, numer, denorm, norm, out, beta, gamma, eps, var_sum, var_sqrt, x) = cache
+
+  dbeta = np.sum(dout, axis=0)
+  dgamma = np.sum(dout * norm, axis=0)
+  N = x.shape[0]
+
+
+  dnorm = dout * gamma
+
+  dnumer = dnorm * denorm
+  dx = dnumer
+  dsample_mean = np.sum(dnumer * (-1), axis=0)
+
+  ddenorm = np.sum(dnorm * numer, axis=0)
+  dvar_sqrt = ddenorm * ((-1) * (var_sqrt ** (-2)))
+  dvar_sum = dvar_sqrt * (0.5 * (var_sum ** (-0.5)))
+  dsample_var = dvar_sum
+
+  dx_minus_mean_square = dsample_var / N
+  dx_minus_mean = dx_minus_mean_square * (2 * (x - sample_mean))
+
+  dx += dx_minus_mean
+  dsample_mean -= np.sum(dx_minus_mean, axis=0)
+
+  dx += dsample_mean / N
+
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
