@@ -256,7 +256,7 @@ class FullyConnectedNet(object):
       if not self.use_batchnorm:
         current_input, net_caches[i] = affine_relu_forward(current_input, self.params['W'+str(i)], self.params['b'+str(i)])
       else:
-        pass
+        current_input, net_caches[i] = affine_bn_relu_forward(current_input, self.params['W'+str(i)], self.params['b'+str(i)], self.params['gamma' + str(i)], self.params['beta' + str(i)], self.bn_params[i - 1])
 
       if self.use_dropout:
         pass
@@ -304,12 +304,43 @@ class FullyConnectedNet(object):
       if not self.use_batchnorm:
         affine_dx, affine_dW, affine_db = affine_relu_backward(last_dx, net_caches[i])
         last_dx = affine_dx
-        grads['W' + str(i)] = affine_dW + self.reg * self.params['W' + str(i)]
-        grads['b' + str(i)] = affine_db
-        loss += 0.5 * self.reg * np.sum(self.params['W' + str(i)] ** 2)
+
+      else:
+        affine_dx, affine_dW, affine_db, dgamma, dbeta = affine_bn_relu_backward(last_dx, net_caches[i])
+        grads['beta' + str(i)] = dbeta
+        grads['gamma' + str(i)] = dgamma
+        last_dx = affine_dx
+
+      grads['W' + str(i)] = affine_dW + self.reg * self.params['W' + str(i)]
+      grads['b' + str(i)] = affine_db
+      loss += 0.5 * self.reg * np.sum(self.params['W' + str(i)] ** 2)
 
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
 
     return loss, grads
+
+def affine_bn_relu_forward(x, W, b, gamma, beta, bn_param):
+
+    af_out, fc_cache = affine_relu_forward(x, W, b)
+
+    bn_out, bn_cache = batchnorm_forward(af_out, gamma, beta, bn_param)
+
+    out, relu_cache = relu_forward(bn_out)
+
+    cache = (fc_cache, bn_cache, relu_cache)
+
+    return out, cache
+
+def affine_bn_relu_backward(dout, cache):
+
+    fc_cache, bn_cache, relu_cache = cache
+
+    drelu_out = relu_backward(dout, relu_cache)
+
+    dbn_out, dgamma, dbeta = batchnorm_backward_alt(drelu_out, bn_cache)
+
+    dx, dW, db = affine_backward(dbn_out, fc_cache)
+
+    return dx, dW, db, dgamma, dbeta
