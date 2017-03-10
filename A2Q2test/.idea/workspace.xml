@@ -18,7 +18,7 @@
       <file leaf-file-name="batch_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/batch_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
+            <state relative-caret-position="638">
               <caret line="22" column="75" lean-forward="false" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
               <folding />
             </state>
@@ -28,9 +28,53 @@
       <file leaf-file-name="layers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3652">
-              <caret line="269" column="39" lean-forward="false" selection-start-line="269" selection-start-column="4" selection-end-line="269" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="7801">
+              <caret line="314" column="39" lean-forward="false" selection-start-line="315" selection-start-column="4" selection-end-line="315" selection-end-column="39" />
+              <folding>
+                <marker date="1489093080737" expanded="true" signature="12422:12692" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="12425:12662" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="12733:14833" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="12736:13481" ph="&quot;&quot;&quot;Performs the forward pass for (inverted) dropout....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="13658:14227" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="13663:13978" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="13992:14227" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="14250:14739" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="14255:14490" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="14504:14739" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="14870:15681" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="14873:15045" ph="&quot;&quot;&quot;Perform the backward pass for (inverted) dropout....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="15143:15632" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="15148:15383" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="15397:15632" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="15728:17239" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="15731:16607" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a convolutional layer....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="16623:16940" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="16950:17187" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="17279:18143" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="17282:17604" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a convolutional layer....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="17639:17876" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="17886:18123" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="18188:19161" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="18191:18615" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a max pooling layer....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="18631:18868" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="18878:19115" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="19205:19950" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="19208:19439" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a max pooling layer....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="19454:19691" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="19701:19938" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="20009:21755" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="20012:20900" ph="&quot;&quot;&quot;Computes the forward pass for spatial batch normalization....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="20930:21487" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="21497:21734" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="21802:23081" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="21805:22206" ph="&quot;&quot;&quot;Computes the backward pass for spatial batch normalization....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="22249:22806" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="22816:23053" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="23105:23843" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="23108:23502" ph="&quot;&quot;&quot;Computes the loss and gradient using for multiclass SVM classification....&quot;&quot;&quot;" />
+                <marker date="1489093080737" expanded="true" signature="23869:24501" ph="..." />
+                <marker date="1489093080737" expanded="true" signature="23872:24253" ph="&quot;&quot;&quot;Computes the loss and gradient for softmax classification....&quot;&quot;&quot;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +82,8 @@
       <file leaf-file-name="layer_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="841">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
               </folding>
@@ -50,8 +94,8 @@
       <file leaf-file-name="fc_net.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/classifiers/fc_net.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="329" column="42" lean-forward="true" selection-start-line="329" selection-start-column="42" selection-end-line="329" selection-end-column="42" />
+            <state relative-caret-position="1408">
+              <caret line="345" column="36" lean-forward="false" selection-start-line="345" selection-start-column="36" selection-end-line="345" selection-end-column="36" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -73,16 +117,16 @@
       <list>
         <option value="$PROJECT_DIR$/batch_test.py" />
         <option value="$PROJECT_DIR$/../assignment2/cs231n/layers.py" />
-        <option value="$PROJECT_DIR$/../assignment2/cs231n/classifiers/fc_net.py" />
         <option value="$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py" />
+        <option value="$PROJECT_DIR$/../assignment2/cs231n/classifiers/fc_net.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1145" />
-    <option name="y" value="716" />
-    <option name="width" value="1535" />
-    <option name="height" value="876" />
+    <option name="x" value="2018" />
+    <option name="y" value="36" />
+    <option name="width" value="1822" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -99,8 +143,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -115,10 +157,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="Python.batch_test">
     <configuration default="false" name="batch_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -295,10 +339,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1145" y="716" width="1535" height="876" extended-state="6" />
+    <frame x="2018" y="36" width="1822" height="1044" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17068404" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1701427" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -327,6 +371,86 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/batch_test.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="22" column="75" lean-forward="false" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7801">
+          <caret line="269" column="39" lean-forward="false" selection-start-line="269" selection-start-column="4" selection-end-line="269" selection-end-column="39" />
+          <folding>
+            <marker date="1489093080737" expanded="true" signature="12422:12692" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12425:12662" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12733:14833" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12736:13481" ph="&quot;&quot;&quot;Performs the forward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="13658:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13663:13978" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13992:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14250:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14255:14490" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14504:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14870:15681" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14873:15045" ph="&quot;&quot;&quot;Perform the backward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="15143:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15148:15383" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15397:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15728:17239" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15731:16607" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="16623:16940" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="16950:17187" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17279:18143" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17282:17604" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="17639:17876" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17886:18123" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18188:19161" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18191:18615" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="18631:18868" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18878:19115" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19205:19950" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19208:19439" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="19454:19691" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19701:19938" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20009:21755" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20012:20900" ph="&quot;&quot;&quot;Computes the forward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="20930:21487" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21497:21734" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21802:23081" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21805:22206" ph="&quot;&quot;&quot;Computes the backward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="22249:22806" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="22816:23053" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23105:23843" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23108:23502" ph="&quot;&quot;&quot;Computes the loss and gradient using for multiclass SVM classification....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="23869:24501" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23872:24253" ph="&quot;&quot;&quot;Computes the loss and gradient for softmax classification....&quot;&quot;&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/classifiers/fc_net.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/batch_test.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="484">
           <caret line="22" column="75" lean-forward="false" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
           <folding />
@@ -337,7 +461,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5918">
           <caret line="269" column="39" lean-forward="false" selection-start-line="269" selection-start-column="4" selection-end-line="269" selection-end-column="39" />
-          <folding />
+          <folding>
+            <marker date="1489093080737" expanded="true" signature="12422:12692" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12425:12662" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12733:14833" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12736:13481" ph="&quot;&quot;&quot;Performs the forward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="13658:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13663:13978" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13992:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14250:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14255:14490" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14504:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14870:15681" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14873:15045" ph="&quot;&quot;&quot;Perform the backward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="15143:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15148:15383" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15397:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15728:17239" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15731:16607" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="16623:16940" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="16950:17187" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17279:18143" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17282:17604" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="17639:17876" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17886:18123" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18188:19161" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18191:18615" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="18631:18868" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18878:19115" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19205:19950" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19208:19439" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="19454:19691" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19701:19938" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20009:21755" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20012:20900" ph="&quot;&quot;&quot;Computes the forward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="20930:21487" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21497:21734" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21802:23081" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21805:22206" ph="&quot;&quot;&quot;Computes the backward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="22249:22806" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="22816:23053" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23105:23843" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23108:23502" ph="&quot;&quot;&quot;Computes the loss and gradient using for multiclass SVM classification....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="23869:24501" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23872:24253" ph="&quot;&quot;&quot;Computes the loss and gradient for softmax classification....&quot;&quot;&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -373,7 +541,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1489093080737" expanded="true" signature="12422:12692" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12425:12662" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12733:14833" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12736:13481" ph="&quot;&quot;&quot;Performs the forward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="13658:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13663:13978" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13992:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14250:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14255:14490" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14504:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14870:15681" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14873:15045" ph="&quot;&quot;&quot;Perform the backward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="15143:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15148:15383" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15397:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15728:17239" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15731:16607" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="16623:16940" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="16950:17187" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17279:18143" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17282:17604" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="17639:17876" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17886:18123" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18188:19161" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18191:18615" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="18631:18868" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18878:19115" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19205:19950" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19208:19439" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="19454:19691" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19701:19938" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20009:21755" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20012:20900" ph="&quot;&quot;&quot;Computes the forward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="20930:21487" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21497:21734" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21802:23081" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21805:22206" ph="&quot;&quot;&quot;Computes the backward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="22249:22806" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="22816:23053" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23105:23843" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23108:23502" ph="&quot;&quot;&quot;Computes the loss and gradient using for multiclass SVM classification....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="23869:24501" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23872:24253" ph="&quot;&quot;&quot;Computes the loss and gradient for softmax classification....&quot;&quot;&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -386,7 +598,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/batch_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
+        <state relative-caret-position="638">
           <caret line="22" column="75" lean-forward="false" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
           <folding />
         </state>
@@ -394,16 +606,60 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3652">
-          <caret line="269" column="39" lean-forward="false" selection-start-line="269" selection-start-column="4" selection-end-line="269" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="7801">
+          <caret line="314" column="39" lean-forward="false" selection-start-line="315" selection-start-column="4" selection-end-line="315" selection-end-column="39" />
+          <folding>
+            <marker date="1489093080737" expanded="true" signature="12422:12692" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12425:12662" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12733:14833" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="12736:13481" ph="&quot;&quot;&quot;Performs the forward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="13658:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13663:13978" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="13992:14227" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14250:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14255:14490" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14504:14739" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14870:15681" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="14873:15045" ph="&quot;&quot;&quot;Perform the backward pass for (inverted) dropout....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="15143:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15148:15383" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15397:15632" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15728:17239" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="15731:16607" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="16623:16940" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="16950:17187" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17279:18143" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17282:17604" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a convolutional layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="17639:17876" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="17886:18123" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18188:19161" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18191:18615" ph="&quot;&quot;&quot;A naive implementation of the forward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="18631:18868" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="18878:19115" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19205:19950" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19208:19439" ph="&quot;&quot;&quot;A naive implementation of the backward pass for a max pooling layer....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="19454:19691" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="19701:19938" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20009:21755" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="20012:20900" ph="&quot;&quot;&quot;Computes the forward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="20930:21487" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21497:21734" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21802:23081" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="21805:22206" ph="&quot;&quot;&quot;Computes the backward pass for spatial batch normalization....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="22249:22806" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="22816:23053" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23105:23843" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23108:23502" ph="&quot;&quot;&quot;Computes the loss and gradient using for multiclass SVM classification....&quot;&quot;&quot;" />
+            <marker date="1489093080737" expanded="true" signature="23869:24501" ph="..." />
+            <marker date="1489093080737" expanded="true" signature="23872:24253" ph="&quot;&quot;&quot;Computes the loss and gradient for softmax classification....&quot;&quot;&quot;" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="841">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
           </folding>
@@ -412,8 +668,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/classifiers/fc_net.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="329" column="42" lean-forward="true" selection-start-line="329" selection-start-column="42" selection-end-line="329" selection-end-column="42" />
+        <state relative-caret-position="1408">
+          <caret line="345" column="36" lean-forward="false" selection-start-line="345" selection-start-column="36" selection-end-line="345" selection-end-column="36" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
