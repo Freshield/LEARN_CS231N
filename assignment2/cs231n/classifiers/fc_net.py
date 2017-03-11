@@ -252,6 +252,7 @@ class FullyConnectedNet(object):
     current_input = X
     net_caches = {}
     bn_net_caches = {}
+    dropout_cache = {}
 
     for i in xrange(1, self.num_layers):
       if not self.use_batchnorm:
@@ -260,7 +261,7 @@ class FullyConnectedNet(object):
         current_input, bn_net_caches[i] = affine_bn_relu_forward(current_input, self.params['W'+str(i)], self.params['b'+str(i)], self.params['gamma' + str(i)], self.params['beta' + str(i)], self.bn_params[i - 1])
 
       if self.use_dropout:
-        pass
+        current_input,dropout_cache[i]  = dropout_forward(current_input, self.dropout_param)
 
     #last layer
     last_out, last_cache = affine_forward(current_input, self.params['W'+str(self.num_layers)], self.params['b'+str(self.num_layers)])
@@ -300,7 +301,8 @@ class FullyConnectedNet(object):
     #loop layer
     for i in xrange(self.num_layers-1, 0, -1):
       if self.use_dropout:
-        pass
+        affine_dx = dropout_backward(last_dx, dropout_cache[i])
+        last_dx = affine_dx
 
       if not self.use_batchnorm:
         affine_dx, affine_dW, affine_db = affine_relu_backward(last_dx, net_caches[i])
