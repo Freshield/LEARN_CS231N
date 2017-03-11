@@ -409,7 +409,24 @@ def conv_forward_naive(x, w, b, conv_param):
   # TODO: Implement the convolutional forward pass.                           #
   # Hint: you can use the function np.pad for padding.                        #
   #############################################################################
-  pass
+  N, C, H, W = x.shape
+  F, C, HH, WW = w.shape
+
+  pad = conv_param['pad']
+  stride = conv_param['stride']
+
+  H_new = 1 + (H + 2 * pad - HH) / stride
+  W_new = 1 + (W + 2 * pad - WW) / stride
+  out = np.zeros((N, F, H_new, W_new))
+
+  x_pad = np.pad(x,((0,0), (0,0), (pad,pad), (pad,pad)),'constant',constant_values=0)
+
+  for n in xrange(N):
+    for f in xrange(F):
+      for hh in xrange(H_new):
+        for ww in xrange(W_new):
+          out[n, f, hh, ww] = np.sum(x_pad[n, :, (hh * stride):(hh * stride + HH),
+                                     (ww * stride):(ww * stride + WW)] * w[f]) + b[f]
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
@@ -434,7 +451,31 @@ def conv_backward_naive(dout, cache):
   #############################################################################
   # TODO: Implement the convolutional backward pass.                          #
   #############################################################################
-  pass
+  x, w, b, conv_param = cache
+
+  N, C, H, W =  x.shape
+  F, _, HH, WW = w.shape
+  _, _, H_NEW, W_NEW = dout.shape
+  pad = conv_param['pad']
+  stride = conv_param['stride']
+
+  dx = np.zeros_like(x)
+  dx = np.pad(dx, ((0,0), (0,0), (pad,pad), (pad,pad)), 'constant', constant_values=0)
+  x_pad = np.pad(x, ((0,0), (0,0), (pad,pad), (pad,pad)), 'constant', constant_values=0)
+  db = np.zeros_like(b)
+  dw = np.zeros_like(w)
+
+  for n in xrange(N):
+    for f in xrange(F):
+      for hh in xrange(H_NEW):
+        for ww in xrange(W_NEW):
+          db[f] += dout[n, f, hh, ww]
+          dw[f] += dout[n, f, hh, ww] * x_pad[n, :, (hh * stride):(hh * stride + HH),
+                                        (ww * stride):(ww * stride + WW)]
+          dx[n, :, (hh * stride):(hh * stride + HH),
+          (ww * stride):(ww * stride + WW)] += dout[n, f, hh, ww] * w[f]
+  dx = dx[:, :, pad:-pad, pad:-pad]
+
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
