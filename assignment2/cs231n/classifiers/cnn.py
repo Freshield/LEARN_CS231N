@@ -47,7 +47,7 @@ class ThreeLayerConvNet(object):
     # hidden affine layer, and keys 'W3' and 'b3' for the weights and biases   #
     # of the output affine layer.                                              #
     ############################################################################
-    C, H, W = input_dim.shape
+    C, H, W = input_dim
     self.params['W1'] = weight_scale * np.random.randn(num_filters, C, filter_size, filter_size)
     self.params['b1'] = np.zeros((num_filters))
 
@@ -87,7 +87,12 @@ class ThreeLayerConvNet(object):
     # computing the class scores for X and storing them in the scores          #
     # variable.                                                                #
     ############################################################################
-    pass
+    N, C, H, W = X.shape
+    crp_out, crp_cache = conv_relu_pool_forward(X, W1, b1, conv_param, pool_param)
+    crp_out_re = np.reshape(crp_out, (N, -1))
+    ar_out, ar_cache = affine_relu_forward(crp_out_re, W2, b2)
+    a_out, a_cache = affine_forward(ar_out, W3, b3)
+    scores = a_out
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
@@ -102,7 +107,18 @@ class ThreeLayerConvNet(object):
     # data loss using softmax, and make sure that grads[k] holds the gradients #
     # for self.params[k]. Don't forget to add L2 regularization!               #
     ############################################################################
-    pass
+    loss, dscores= softmax_loss(scores, y)
+    loss += 0.5 * self.reg * (np.sum(W1 ** 2) + np.sum(W2 ** 2) + np.sum(W3 ** 2))
+
+    da_out, grads['W3'], grads['b3'] = affine_backward(dscores, a_cache)
+    grads['W3'] += self.reg * W3
+
+    dar_out, grads['W2'], grads['b2'] = affine_relu_backward(da_out, ar_cache)
+    grads['W2'] += self.reg * W2
+
+    dar_out_re = np.reshape(dar_out, crp_out.shape)
+    dx, grads['W1'], grads['b1'] = conv_relu_pool_backward(dar_out_re, crp_cache)
+    grads['W1'] += self.reg * W1
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
