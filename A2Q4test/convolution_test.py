@@ -24,3 +24,6 @@ h = np.pad(h,(1,1),'constant',constant_values=0)
 print h
 h = h[1:-1,1:-1]
 print h
+
+print np.maximum(1,2)
+print np.max([1,2,3])
