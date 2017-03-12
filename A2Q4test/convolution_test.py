@@ -30,3 +30,5 @@ i = np.array([5,6,3,8,1])
 print np.maximum(1,2)
 print np.max(i)
 print (i == np.max((i)))
+
+print np.zeros((10))
