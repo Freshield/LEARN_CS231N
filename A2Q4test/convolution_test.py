@@ -25,5 +25,8 @@ print h
 h = h[1:-1,1:-1]
 print h
 
+i = np.array([5,6,3,8,1])
+
 print np.maximum(1,2)
-print np.max([1,2,3])
+print np.max(i)
+print (i == np.max((i)))
