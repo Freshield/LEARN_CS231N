@@ -600,7 +600,40 @@ def spatial_batchnorm_forward(x, gamma, beta, bn_param):
   # version of batch normalization defined above. Your implementation should  #
   # be very short; ours is less than five lines.                              #
   #############################################################################
-  pass
+  N, C, H, W = x.shape
+  mode = bn_param['mode']
+  eps = bn_param.get('eps',1e-5)
+  momentum = bn_param.get('momentum', 0.9)
+
+  running_mean = bn_param.get('running_mean', np.zeros(C, dtype=x.dtype))
+  running_var = bn_param.get('running_var', np.zeros(C, dtype=x.dtype))
+
+  if mode == 'train':
+
+    mu = (1. / (N * H * W) * np.sum(x, axis=(0, 2, 3))).reshape(1, C, 1, 1)
+    var = (1. / (N * H * W) * np.sum((x - mu) ** 2, axis=(0, 2, 3))).reshape(1, C, 1, 1)
+
+    xhat = (x - mu) / (np.sqrt(var + eps))
+    out = gamma.reshape(1, C, 1, 1) * xhat + beta.reshape(1, C, 1, 1)
+
+    running_mean = momentum * running_mean + (1 - momentum) * np.squeeze(mu)
+    running_var = momentum * running_var + (1 - momentum) * np.squeeze(var)
+
+    cache = (mu, var, x, xhat, gamma, beta, bn_param)
+
+    bn_param['running_mean'] = running_mean
+    bn_param['running_var'] = running_var
+
+  elif mode == 'test':
+    mu = running_mean.reshape(1, C, 1, 1)
+    var = running_var.reshape(1, C, 1, 1)
+
+    xhat = (x - mu) / (np.sqrt(var + eps))
+    out = gamma.reshape(1, C, 1, 1) * xhat + beta.reshape(1, C, 1, 1)
+    cache = (mu, var, x, xhat, gamma, beta, bn_param)
+
+  else:
+      raise ValueError('Invalid forward batchnorm mode "%s"' % mode)
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
