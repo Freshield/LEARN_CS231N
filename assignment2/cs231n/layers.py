@@ -663,7 +663,21 @@ def spatial_batchnorm_backward(dout, cache):
   # version of batch normalization defined above. Your implementation should  #
   # be very short; ours is less than five lines.                              #
   #############################################################################
-  pass
+  mu, var, x, xhat, gamma, beta, bn_param = cache
+  N, C, H, W = x.shape
+  mode = bn_param['mode']
+  eps = bn_param.get('eps', 1e-5)
+
+  gamma = gamma.reshape(1, C, 1, 1)
+  beta = beta.reshape(1, C, 1, 1)
+
+  dbeta = np.sum(dout, axis=(0,2,3))
+  dgamma = np.sum(xhat * dout, axis=(0,2,3))
+
+  Nt = N * H * W
+
+  dx = (1. / Nt) * gamma * (var + eps) ** (-1. / 2.) * (Nt * dout - np.sum(dout, axis=(0,2,3)).reshape(1, C, 1, 1) - (x - mu) * (var + eps) ** (-1.0) * np.sum(dout * (x - mu), axis=(0,2,3)).reshape(1, C, 1, 1))
+
   #############################################################################
   #                             END OF YOUR CODE                              #
   #############################################################################
