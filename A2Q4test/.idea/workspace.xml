@@ -18,7 +18,7 @@
       <file leaf-file-name="convolution_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/convolution_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="957">
+            <state relative-caret-position="726">
               <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding />
             </state>
@@ -29,7 +29,7 @@
         <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="538">
-              <caret line="668" column="32" lean-forward="false" selection-start-line="668" selection-start-column="32" selection-end-line="668" selection-end-column="32" />
+              <caret line="681" column="32" lean-forward="false" selection-start-line="681" selection-start-column="32" selection-end-line="681" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="cnn.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/classifiers/cnn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
+            <state relative-caret-position="726">
               <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
               <folding />
             </state>
@@ -48,7 +48,7 @@
       <file leaf-file-name="layer_utils.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2233">
+            <state relative-caret-position="1672">
               <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="19" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -77,10 +77,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2018" />
-    <option name="y" value="36" />
-    <option name="width" value="1822" />
-    <option name="height" value="1044" />
+    <option name="x" value="1145" />
+    <option name="y" value="716" />
+    <option name="width" value="1535" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -293,10 +293,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2018" y="36" width="1822" height="1044" extended-state="6" />
+    <frame x="1145" y="716" width="1535" height="876" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24917673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24885994" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -323,6 +323,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/convolution_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/classifiers/cnn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/convolution_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="957">
@@ -409,7 +443,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/convolution_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="957">
+        <state relative-caret-position="726">
           <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding />
         </state>
@@ -424,7 +458,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layer_utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2233">
+        <state relative-caret-position="1672">
           <caret line="77" column="19" lean-forward="false" selection-start-line="77" selection-start-column="4" selection-end-line="77" selection-end-column="19" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
@@ -434,7 +468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/classifiers/cnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
+        <state relative-caret-position="726">
           <caret line="37" column="22" lean-forward="false" selection-start-line="37" selection-start-column="22" selection-end-line="37" selection-end-column="22" />
           <folding />
         </state>
@@ -443,7 +477,7 @@
     <entry file="file://$PROJECT_DIR$/../assignment2/cs231n/layers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="538">
-          <caret line="668" column="32" lean-forward="false" selection-start-line="668" selection-start-column="32" selection-end-line="668" selection-end-column="32" />
+          <caret line="681" column="32" lean-forward="false" selection-start-line="681" selection-start-column="32" selection-end-line="681" selection-end-column="32" />
           <folding />
         </state>
       </provider>
