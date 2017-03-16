@@ -139,4 +139,4 @@ $RECYCLE.BIN/
 *.lnk
 
 #datasets
-assignment2/datasets/*
+datasets
