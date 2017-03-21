@@ -6,3 +6,6 @@ print a
 
 for b in a:
     print np.tanh(b)
+
+for c in xrange(4, -1, -1):
+    print c

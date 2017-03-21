@@ -75,7 +75,7 @@ def rnn_step_backward(dnext_h, cache):
   dprev_h = np.dot(dforward, Wh.T)
   dWh = np.dot(prev_h.T, dforward)
   db = np.sum(dforward, axis=0)
-  
+
   ##############################################################################
   #                               END OF YOUR CODE                             #
   ##############################################################################
@@ -106,7 +106,25 @@ def rnn_forward(x, h0, Wx, Wh, b):
   # input data. You should use the rnn_step_forward function that you defined  #
   # above.                                                                     #
   ##############################################################################
-  pass
+  N, T, D = x.shape
+  H = h0.shape[1]
+
+  x = np.transpose(x, axes=(1,0,2))
+
+  h = np.zeros((T, N, H))
+  cache = np.zeros(T)
+
+  for t in xrange(T):
+    h_prev = None
+
+    if t == 0:
+      h_prev = h0
+    else:
+      h_prev = h[t - 1]
+
+    h[t], cache[t] = rnn_step_forward(x[t], h_prev, Wx, Wh, b)
+
+  h = np.transpose(h, axes=(1,0,2))
   ##############################################################################
   #                               END OF YOUR CODE                             #
   ##############################################################################
@@ -133,7 +151,22 @@ def rnn_backward(dh, cache):
   # sequence of data. You should use the rnn_step_backward function that you   #
   # defined above.                                                             #
   ##############################################################################
-  pass
+  N, T, H = dh.shape
+
+  x_temp = cache[0][0]
+
+  D = x_temp.shape[2]
+
+  dh = np.transpose(dh, axes=(1,0,2))
+
+  dx = np.zeros((T, N, D))
+  dh0 = np.zeros((N, H))
+  dWx = np.zeros((D, H))
+  dWh = np.zeros((H, H))
+  db = np.zeros(H)
+
+  for t in xrange(T - 1, -1, -1):
+    pass
   ##############################################################################
   #                               END OF YOUR CODE                             #
   ##############################################################################
