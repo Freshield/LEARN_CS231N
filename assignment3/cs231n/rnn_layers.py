@@ -402,7 +402,13 @@ def temporal_affine_forward(x, w, b):
   """
   N, T, D = x.shape
   M = b.shape[0]
-  out = x.reshape(N * T, D).dot(w).reshape(N, T, M) + b
+
+  #test = x.dot(w)
+  #print 'N, T, D, M',N,T,D,M
+  #print test.shape
+
+  #out = x.reshape(N * T, D).dot(w).reshape(N, T, M) + b
+  out = x.dot(w) + b
   cache = x, w, b, out
   return out, cache
 
@@ -426,6 +432,9 @@ def temporal_affine_backward(dout, cache):
 
   dx = dout.reshape(N * T, M).dot(w.T).reshape(N, T, D)
   dw = dout.reshape(N * T, M).T.dot(x.reshape(N * T, D)).T
+  #dw =  np.dot(x.reshape(N * T, D).T, dout.reshape(N * T, M))
+
+
   db = dout.sum(axis=(0, 1))
 
   return dx, dw, db
