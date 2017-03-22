@@ -15,3 +15,19 @@ print d
 
 d[0] = 1
 print d
+
+N, T, V, D = 2, 4, 5, 2
+
+x = np.asarray([[0, 3, 1, 2], [0, 1, 2, 3]])
+W = np.array([
+    ['I','','',''],
+    ['L','O','V','E'],
+    ['Y','O','U',''],
+    ['!','','','']
+])
+print 'x'
+print x
+print 'W'
+print W
+print 'W[x,:]'
+print W[x,:]
