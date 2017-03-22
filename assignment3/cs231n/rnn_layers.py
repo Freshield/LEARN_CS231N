@@ -109,9 +109,9 @@ def rnn_forward(x, h0, Wx, Wh, b):
   N, T, D = x.shape
   H = h0.shape[1]
 
-  x = np.transpose(x, axes=(1,0,2))
+  #x = np.transpose(x, axes=(1,0,2))
 
-  h = np.zeros((T, N, H))
+  h = np.zeros((N, T, H))
   cache = {}
 
   for t in xrange(T):
@@ -119,11 +119,11 @@ def rnn_forward(x, h0, Wx, Wh, b):
     if t == 0:
       h_prev = h0
     else:
-      h_prev = h[t - 1]
+      h_prev = h[:,t - 1,:]
 
-    h[t], cache[t] = rnn_step_forward(x[t], h_prev, Wx, Wh, b)
+    h[:,t,:], cache[t] = rnn_step_forward(x[:,t,:], h_prev, Wx, Wh, b)
 
-  h = np.transpose(h, axes=(1,0,2))
+  #h = np.transpose(h, axes=(1,0,2))
   ##############################################################################
   #                               END OF YOUR CODE                             #
   ##############################################################################
@@ -156,10 +156,9 @@ def rnn_backward(dh, cache):
 
   D = x_temp.shape[1]
 
-  dh = np.transpose(dh, axes=(1,0,2))
+  #dh = np.transpose(dh, axes=(1,0,2))
 
-  dx = np.zeros((T, N, D))
-  dh0 = np.zeros((N, H))
+  dx = np.zeros((N, T, D))
   dWx = np.zeros((D, H))
   dWh = np.zeros((H, H))
   db = np.zeros(H)
@@ -167,16 +166,16 @@ def rnn_backward(dh, cache):
   dprev_h = np.zeros((N, H))
 
   for t in xrange(T - 1, -1, -1):
-    dnexth = dh[t] + dprev_h
+    dnexth = dh[:,t,:] + dprev_h
     dxt, dprev_h, dWxt, dWht, dbt = rnn_step_backward(dnexth, cache[t])
 
-    dx[t] += dxt
+    dx[:,t,:] += dxt
     dWx += dWxt
     dWh += dWht
     db += dbt
 
   dh0 = dprev_h
-  dx = np.transpose(dx, axes=(1,0,2))
+  #dx = np.transpose(dx, axes=(1,0,2))
 
   ##############################################################################
   #                               END OF YOUR CODE                             #
