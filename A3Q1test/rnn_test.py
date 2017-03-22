@@ -9,3 +9,9 @@ for b in a:
 
 for c in xrange(4, -1, -1):
     print c
+
+d = np.zeros(5)
+print d
+
+d[0] = 1
+print d
