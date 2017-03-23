@@ -135,7 +135,57 @@ class CaptioningRNN(object):
     # defined above to store loss and gradients; grads[k] should give the      #
     # gradients for self.params[k].                                            #
     ############################################################################
-    pass
+
+    #step 1
+    h0 = np.dot(features, W_proj) + b_proj
+
+    #step2
+    x, cache_wem = word_embedding_forward(captions_in, W_embed)
+
+    #step3
+    if self.cell_type == 'rnn':
+      h, cache_rnn = rnn_forward(x, h0, Wx, Wh, b)
+    elif self.cell_type == 'lstm':
+      pass
+    else:
+      raise ValueError('%s not implemented' % (self.cell_type))
+
+    #step 4
+    scores, cache_affine = temporal_affine_forward(h, W_vocab, b_vocab)
+
+    #step 5
+    loss, dscores = temporal_softmax_loss(scores, captions_out, mask, verbose=False)
+
+    ###################backward now#########################
+    grads = {}
+
+    #d step 4
+    dh, dW_vocab, db_vocab = temporal_affine_backward(dscores, cache_affine)
+
+    #d step 3
+    if self.cell_type == 'rnn':
+      dx, dh0, dWx, dWh, db = rnn_backward(dh, cache_rnn)
+    elif self.cell_type == 'lstm':
+      pass
+    else:
+      raise ValueError('%s not implemented' % (self.cell_type))
+
+    #d step 2
+    dW_embed = word_embedding_backward(dx, cache_wem)
+
+    #d step 1
+    dW_proj = np.dot(features.T, dh0)
+    db_proj = np.sum(dh0, axis=0)
+
+    #add to grad
+    grads['W_vocab'] = dW_vocab
+    grads['b_vocab'] = db_vocab
+    grads['Wx'] = dWx
+    grads['Wh'] = dWh
+    grads['b'] = db
+    grads['W_embed'] = dW_embed
+    grads['W_proj'] = dW_proj
+    grads['b_proj'] = db_proj
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
