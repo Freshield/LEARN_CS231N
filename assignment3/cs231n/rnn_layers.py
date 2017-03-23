@@ -466,6 +466,7 @@ def temporal_softmax_loss(x, y, mask, verbose=False):
   - loss: Scalar giving loss
   - dx: Gradient of loss with respect to scores x.
   """
+  
 
   N, T, V = x.shape
   
