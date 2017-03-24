@@ -53,3 +53,17 @@ np.add.at(a,[[0,1],[1,2]],b)
 print a
 
 print
+
+a = np.ones((2,3))
+print a
+a[:, 0] = 0
+print a
+print a[:,0].reshape((-1,1)).shape
+
+a = np.array([1,0,1,0])
+
+W = np.array([[1,2,3],[4,5,6]])
+
+print W[a, :]
+print W.shape[0]
+print W[np.arange(W.shape[0]),np.argmax(W, axis=1)]

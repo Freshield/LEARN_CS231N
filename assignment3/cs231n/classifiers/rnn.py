@@ -218,7 +218,7 @@ class CaptioningRNN(object):
       of captions should be the first sampled word, not the <START> token.
     """
     N = features.shape[0]
-    captions = self._null * np.ones((N, max_length), dtype=np.int32)
+    captions = self._null * np.ones((N, max_length + 1), dtype=np.int32)
 
     # Unpack parameters
     W_proj, b_proj = self.params['W_proj'], self.params['b_proj']
@@ -247,44 +247,43 @@ class CaptioningRNN(object):
     # functions; you'll need to call rnn_step_forward or lstm_step_forward in #
     # a loop.                                                                 #
     ###########################################################################
-    # Get first hidden state
+
+    #first h0
     h0 = np.dot(features, W_proj) + b_proj
 
+    #prepare
     captions[:, 0] = self._start
-    prev_h = h0  # Previous hidden state
-    prev_c = np.zeros_like(h0)  # Previous cell state
-    # Current word (start word)
-    capt = self._start * np.ones((N, 1), dtype=np.int32)
+    prev_h = h0
+    word_input = captions[:,0]
+    for t in xrange(max_length):
+      #embedding
+      x, _ = word_embedding_forward(word_input, W_embed)
 
-    for t in xrange(max_length):  # Let's go over the sequence
-
-      word_embed, _ = word_embedding_forward(
-        capt, W_embed)  # Embedded current word
+      #rnn step
       if self.cell_type == 'rnn':
-        # Run a step of rnn
-        h, _ = rnn_step_forward(np.squeeze(
-          word_embed), prev_h, Wx, Wh, b)
+        next_h, _ = rnn_step_forward(np.squeeze(x), prev_h, Wx, Wh, b)
       elif self.cell_type == 'lstm':
-        # Run a step of lstm
-        h, c, _ = lstm_step_forward(np.squeeze(
-          word_embed), prev_h, prev_c, Wx, Wh, b)
+        pass
       else:
         raise ValueError('%s not implemented' % (self.cell_type))
 
-      # Compute the score distrib over the dictionary
-      scores, _ = temporal_affine_forward(
-        h[:, np.newaxis, :], W_vocab, b_vocab)
-      # Squeeze unecessari dimension and get the best word idx
-      idx_best = np.squeeze(np.argmax(scores, axis=2))
-      # Put it in the captions
-      captions[:, t] = idx_best
+      #affine
+      scores, _ = temporal_affine_forward(next_h[:, np.newaxis, :], W_vocab, b_vocab)
 
-      # Update the hidden state, the cell state (if lstm) and the current
-      # word
-      prev_h = h
-      if self.cell_type == 'lstm':
-        prev_c = c
-      capt = captions[:, t]
+      scores = np.squeeze(scores)
+      idx_best = np.argmax(scores, axis=1)
+
+      captions[:,t + 1] = idx_best
+
+      #update
+      prev_h = next_h
+      word_input = captions[:, t + 1]
+
+
+
+
+
+
     ############################################################################
     #                             END OF YOUR CODE                             #
     ############################################################################
