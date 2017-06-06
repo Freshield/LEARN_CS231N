@@ -67,7 +67,15 @@ def rnn_step_backward(dnext_h, cache):
   # HINT: For the tanh function, you can compute the local derivative in terms #
   # of the output value from tanh.                                             #
   ##############################################################################
-  pass
+  x, Wx, prev_h, Wh, forward = cache
+
+  dforward = (1 - np.tanh(forward) ** 2) * dnext_h
+
+  dx = np.dot(dforward, Wx.T)
+  dWx = np.dot(x.T, dforward)
+  dprev_h = np.dot(dforward, Wh.T)
+  dWh = np.dot(prev_h.T, dforward)
+  db = np.sum(dforward, axis=0)
   ##############################################################################
   #                               END OF YOUR CODE                             #
   ##############################################################################
