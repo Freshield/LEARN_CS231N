@@ -1,7 +1,9 @@
 import numpy as np
 
-a = np.arange(24).reshape([4,6])
+a = np.arange(24).reshape([4,3,2])
 
 print a
 
-print np.sum(a, axis=0)
+for t in range(3):
+    print a[:,t,:]
+    print a[:,t,:].shape
