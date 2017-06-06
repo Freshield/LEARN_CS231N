@@ -7,3 +7,6 @@ print a
 for t in range(3):
     print a[:,t,:]
     print a[:,t,:].shape
+
+for t in range(2, -1, -1):
+    print t
